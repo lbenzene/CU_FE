@@ -47,6 +47,25 @@ a:focus {
   text-decoration: underline;
 }
 
+  /**
+   * bg_color 
+   */
+
+.bg_blue_1 {background-color: #4285F4;}
+.bg_red_1 {background-color: #D84437;}
+.bg_yellow_1 {background-color: #F4B400;}
+.bg_green_1 {background-color: #0F9D58;}
+.bg_blue_2 {background-color: #76A7FA;}
+.bg_red_2 {background-color: #E57368;}
+.bg_yellow_2 {background-color: #FBCB43;}
+.bg_green_2 {background-color: #33B679;}
+.bg_blue_3 {background-color: #ADC3FF;}
+.bg_red_3 {background-color: #ED9D97;}
+.bg_yellow_3 {background-color: #FFE168;}
+.bg_green_3 {background-color: #7BCFA9;}
+.white {background-color: #FFFFFF;}
+.bg_white {background-color: #EBEBEB;}
+
 .row {
   display: block;
   width: 100%;
