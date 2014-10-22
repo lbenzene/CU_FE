@@ -66,7 +66,9 @@ a:focus {
 .white {background-color: #FFFFFF;}
 .bg_white {background-color: #EBEBEB;}
 
-.row {
+.row,
+header,
+footer {
   display: block;
   width: 100%;
   padding-top: 2rem;
@@ -87,6 +89,25 @@ body > div:nth-of-type(2).row {
   box-shadow: 0 1px 0 rgba(0,0,0, .2);
 */
 }
+
+    /**
+     * footer part
+     */
+div.footer {
+  text-align: center;
+  padding-bottom: 4rem;
+  border-top: .1rem solid #C0C0C0;
+  padding-top: .5rem;
+}
+
+div.footer > p {
+  line-height: 2em;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #666;
+}
+
 
 .bento {
   background: #FFFFFF;
@@ -385,24 +406,6 @@ div.class-arrow {
   border-width: .5rem;
   margin-left: 6.6rem;
   margin-top: -2rem;
-}
-
-    /**
-     * footer part
-     */
-div.footer {
-  text-align: center;
-  padding-bottom: 4rem;
-  border-top: .1rem solid #C0C0C0;
-  padding-top: .5rem;
-}
-
-div.footer > p {
-  line-height: 2em;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 1.4rem;
-  color: #666;
 }
 
   /**
