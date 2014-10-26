@@ -75,6 +75,11 @@ footer {
   padding-bottom: 2rem;
 }
 
+header {
+  height: 6rem;
+  padding: 0;
+}
+
 body > div:nth-of-type(2).row {
   padding-top: 4rem;
 }
@@ -88,6 +93,28 @@ body > div:nth-of-type(2).row {
   border-bottom: 2px solid #C0C0C0;
   box-shadow: 0 1px 0 rgba(0,0,0, .2);
 */
+}
+
+header > .container > ul.left,
+header > .container > ul.right {
+  position: relative;
+  display: block;
+  position: relative;
+}
+
+header > .container > ul > li {
+  list-style-type: none;
+  display: block;
+  position: relative;
+
+}
+
+header > .container > .left {
+  float: left;
+}
+
+header > .container > .right {
+  float: right;
 }
 
     /**
