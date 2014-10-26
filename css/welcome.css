@@ -1,5 +1,5 @@
 body {
-  background-color: #EBEBEB;
+  background-color: #f5f6f7;
 }
 
 #welcome {
@@ -27,6 +27,21 @@ div.login {
   background-color: transparent;
 }
 
+div.login > h1 {
+  display: block;
+  position: relative;
+  height: 3rem;
+  padding: .5rem 0;
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: inherit;
+  font-style: normal;
+  text-align: center;
+  line-height: 1em;
+  vertical-align: middle;
+
+}
+
 div.login > form {
   background-color: transparent;
 }
@@ -34,28 +49,29 @@ div.login > form {
 div.login > form > div {
   display: block;
   position: relative;
-  padding: 1rem 1rem;
-  background-color: #FFFFFF;
-  border-radius: .2rem;
-  box-shadow: 0 0 .3rem rgba(0,0,0, .3);
+  margin-bottom: .5rem;
 }
 
-div.login > form > div > p {
-  
-}
-
-div.login > form > div > p:first-child {
-  border-bottom: 1px solid #CCCCCC;
-}
-
-div.login > form > div > p > input {
+div.login > form > div > input {
   display: block;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  height: 3rem;
   width: 100%;
-  height: 1em;
+  /*padding-left: 3rem;*/
+  background-color: #FFFFFF;
   border: none;
-  outline: none;
+  outline: 2px solid #999999;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: outline linear 0.2s, box-shadow linear 0.2s;
+     -moz-transition: outline linear 0.2s, box-shadow linear 0.2s;
+       -o-transition: outline linear 0.2s, box-shadow linear 0.2s;
+          transition: outline linear 0.2s, box-shadow linear 0.2s;
   font-size: 1.125rem;
-  line-height: 1em;
+  color: #333333;
+  line-height: 3rem;
   vertical-align: middle;
-  text-align: left;
 }
