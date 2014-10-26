@@ -20,7 +20,32 @@
     <h1>HELLO</h1>
 </div>
 
-<div></div>
+<header>
+    <div class="container">
+        <a class="logo" href="./welcome.html"><!--<img src="" >-->KnowU</a>
+        <ul class="right">
+            <a href=""></a>
+        </ul>
+    </div>
+</header>
+
+<div class="login">
+    <form>
+        <input type="hidden" id="csrf_token" name="csrf_token">
+        <div>
+            <p>
+                <input name="username" type="text" placeholder="学号" maxlength="10" />
+            </p>
+            <p>
+                <input nmae="password" type="password" placeholder="密码" />
+            </p>
+        </div>
+        <div>
+            <input name="submit" type="submit" value="登&nbsp;录" />
+        </div>
+    </form>
+
+</div>
 
 <script type="text/javascript" src="./js/jQuery.js"></script>
 <script type="text/javascript">
