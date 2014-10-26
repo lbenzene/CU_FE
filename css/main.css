@@ -75,7 +75,7 @@ footer {
 
 header {
   height: 4rem;
-  padding: 0;
+  padding: 0 !important;
   background-color: #FFFFFF;
 }
 

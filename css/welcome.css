@@ -49,29 +49,136 @@ div.login > form {
 div.login > form > div {
   display: block;
   position: relative;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
-div.login > form > div > input {
+div.login > form > div:last-child {
+  margin-bottom: 0;
+}
+
+div.login > form > div > input[type="text"],
+div.login > form > div > input[type="password"] {
   display: block;
   position: relative;
   margin-left: 0;
   margin-right: 0;
   height: 3rem;
   width: 100%;
-  /*padding-left: 3rem;*/
+  padding-left: 3rem;
   background-color: #FFFFFF;
-  border: none;
-  outline: 2px solid #999999;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-     -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  -webkit-transition: outline linear 0.2s, box-shadow linear 0.2s;
-     -moz-transition: outline linear 0.2s, box-shadow linear 0.2s;
-       -o-transition: outline linear 0.2s, box-shadow linear 0.2s;
-          transition: outline linear 0.2s, box-shadow linear 0.2s;
+  box-sizing: border-box;
+  border: 1px solid #CCCCCC;
+  outline: none;
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.075);
+     -moz-box-shadow: inset 0 0 1px rgba(0,0,0,0.075);
+          box-shadow: inset 0 0 1px rgba(0,0,0,0.075);
+  -webkit-transition: all linear 0.2s;
+     -moz-transition: all linear 0.2s;
+       -o-transition: all linear 0.2s;
+          transition: all linear 0.2s;
   font-size: 1.125rem;
   color: #333333;
   line-height: 3rem;
   vertical-align: middle;
+}
+
+div.login > form > div > input[type="text"]:focus,
+div.login > form > div > input[type="password"]:focus {
+  border: 1px solid #999999;
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+     -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+          box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+}
+
+div.form > form input[type="text"]:-moz-placeholder,
+div.form > form input[type="password"]:-moz-placeholder {
+  color: #666666;
+}
+
+div.form > form input[type="text"]::-moz-placeholder,
+div.form > form input[type="password"]::-moz-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+div.form > form input[type="text"]:-ms-input-placeholder,
+div.form > form input[type="password"]:-ms-input-placeholder {
+  color: #666666;
+}
+
+div.form > form input[type="text"]::-webkit-input-placeholder,
+div.form > form input[type="password"]::-webkit-input-placeholder {
+  color: #666666;
+}
+
+a.btn,
+input[type="submit"].btn,
+input[type="button"].btn {
+  position: relative;
+  display: block;
+  height: 3rem;
+  width: auto;
+  box-sizing: border-box;
+  border-radius: .2rem;
+  border: none;
+  border-bottom: .2rem solid #CCCCCC;
+  background-color: #EBEBEB;
+  color: #666666;
+  line-height: 3rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.125rem;
+  -webkit-transition: all linear 0.2s;
+     -moz-transition: all linear 0.2s;
+       -o-transition: all linear 0.2s;
+          transition: all linear 0.2s;
+  cursor: pointer;
+}
+
+a.btn {
+  padding: 0 .5rem;
+  text-decoration: none;
+}
+
+a.btn.small {
+  height: 3rem;
+  width: auto;
+  margin-top: .5rem;
+}
+
+a.btn:hover,
+a.btn:focus {
+  background-color: #CBCBCB;
+  border-bottom-color: #ABABAB;
+}
+
+input[type="submit"].btn,
+input[type="button"].btn {
+  outline: none;
+  width: 100%;
+}
+
+a.bth,
+input[type="submit"].btn.blue,
+input[type="button"].btn.blue {
+  border-bottom-color: #19356b;
+  background-color: #3b5998;
+  color: #FFFFFF;
+}
+
+a.bth:hover,
+a.bth:focus,
+input[type="submit"].btn.blue:hover,
+input[type="button"].btn.blue:hover,
+input[type="submit"].btn.blue:focus,
+input[type="button"].btn.blue:focus {
+  border-bottom-color: #29457b;
+  background-color: #4b59A8;
+}
+
+input[type="submit"].btn.orange,
+input[type="button"].btn.orange {
+  border-bottom-color: #19356b;
+  background-color: #3b5998;
+  color: #FFFFFF;
 }
