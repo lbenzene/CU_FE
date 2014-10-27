@@ -35,9 +35,6 @@ function tag_ready(id1, id2, id3, during, delay) {
     tag_in("#"+id3, during, 2*delay);
 }
 
-function tag_already() {
-
-}
 
  /**
   * 标签进入动画
@@ -84,9 +81,9 @@ function tag_chosen(obj) {
         $tag.animate({"opacity":"0"}, 500);
         // $taga.animate({"width":"110%","height":"110%","top":"-5%","left":"-5%"}, 500);
         }, 200);
-    var hfly = '<span class="tag" ';
-    hfly +='style=' + $taga.text() +'</span>';
-    $("body").append(hfly);
+    // var hfly = '<span class="tag" ';
+    // hfly +='style=' + $taga.text() +'</span>';
+    // $("body").append(hfly);
     // $tag.add
     // $(document).appendChild
 }

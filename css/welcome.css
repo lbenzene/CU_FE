@@ -3,7 +3,8 @@ body {
 }
 
 #welcome {
-  position: absolute;
+  position: fixed;
+  margin-top: 0 !important;
   top: 0;
   left: 0;
   height: 100%;
@@ -21,7 +22,7 @@ div.login {
   position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   height: auto;
   background-color: transparent;
 }
