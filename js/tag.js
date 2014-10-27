@@ -1,7 +1,6 @@
 $(document).ready(function(){
-    tag_in("#tag1", 500, 0);
-    tag_in("#tag2", 500, 200);
-    tag_in("#tag3", 500, 400);
+    tag_ready("tag1", "tag2", "tag3", 500, 200);
+
     $("div.tag-choosing").children("div").click(function(){
         var id_chosen = $(this).attr("id");
         // alert(id_chosen);
@@ -10,13 +9,25 @@ $(document).ready(function(){
             if (id_chosen == ("tag"+i)) {
                 tag_chosen("#tag"+i);
             } else {
-                tag_out("#tag"+i, 500, 200*flg++ + 200)
+                tag_out("#tag"+i, 500, 200*flg++ + 200);
             }
-        };
-    });
+        }
 
+        setTimeout(function(){reset_all("tag1", "tag2", "tag3");}, 1500);
+    });
 });
 
+function reset_all(id1, id2, id3) {
+    reset_tag(id1);
+    reset_tag(id2);
+    reset_tag(id3);
+    tag_ready("tag1", "tag2", "tag3", 500, 200);
+}
+
+function reset_tag(id) {
+    $("#"+id).css({"left":"100%","margin-left":"1rem","margin-right":"0","opacity":"1"});
+    $("#"+id).children("a").removeClass("chosen");
+}
 
 function tag_ready(id1, id2, id3, during, delay) {
     tag_in("#"+id1, during, 0);
@@ -67,17 +78,15 @@ function tag_out(obj, during, delay) {
 function tag_chosen(obj) {
     var $tag = $(obj);
     var $taga = $tag.children("a");
-    var offset = $tag.offset() - 0.5*$tag.width();
-    var x = offset.left;
-    var y = offset.top;
+
     $taga.addClass("chosen");
     setTimeout(function(){
         $tag.animate({"opacity":"0"}, 500);
-        $taga.animate({"width":"0","height":"0","top":"50%","left":"50%"}, 500);
+        // $taga.animate({"width":"110%","height":"110%","top":"-5%","left":"-5%"}, 500);
         }, 200);
-                  
-    var hfly = '<span class="tag">' + $taga.text +'</span>';
+    var hfly = '<span class="tag" ';
+    hfly +='style=' + $taga.text() +'</span>';
     $("body").append(hfly);
     // $tag.add
-    // $(document).addelement
+    // $(document).appendChild
 }

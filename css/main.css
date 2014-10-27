@@ -100,8 +100,8 @@ input[type="button"].btn {
 a.btn.blue,
 input[type="submit"].btn.blue,
 input[type="button"].btn.blue {
-  border-bottom-color: #19356b;
-  background-color: #3b5998;
+  border-bottom-color: #3275E4;
+  background-color: #6697EA;
   color: #FFFFFF;
 }
 
@@ -111,14 +111,14 @@ input[type="submit"].btn.blue:hover,
 input[type="button"].btn.blue:hover,
 input[type="submit"].btn.blue:focus,
 input[type="button"].btn.blue:focus {
-  border-bottom-color: #29457b;
-  background-color: #4b59A8;
+  border-bottom-color: #4285F4;
+  background-color: #76A7FA;
 }
 
 input[type="submit"].btn.orange,
 input[type="button"].btn.orange {
   border-bottom-color: #19356b;
-  background-color: #3b5998;
+  background-color: #ADC3FF;
   color: #FFFFFF;
 }
 
@@ -297,18 +297,21 @@ div.tag-choosing > div {
   height: 3rem;
   margin-left: 1rem;
   margin-top: 2rem;
+  overflow: visible;
 }
 
 div.tag-choosing > div > a {
   position: relative;
   display: block;
   overflow: hidden;
+  transition: all 0;
+  -webkit-transition: all 0;
 }
 
 div.tag-choosing > div > a.chosen {
   background-color: #FFFFFF;
   border-color: #FFFFFF;
-  box-shadow: 0 0 2rem rgba(255,255,255, .7);
+  box-shadow: 0 0 1rem rgba(255,255,255, 1);
   transition: all .2s;
   -webkit-transition: all .2s;
 }
@@ -317,10 +320,10 @@ span.tag {
   display: block;
   position: absolute;
   width: 4rem;
-  height: 4rem;
-  border-radius: 2rem;
+  height: 2rem;
+  border-radius: 5px;
   background-color: #FFFFFF;
-  box-shadow: 0 0 2rem rgba(255,255,255, .7);
+  box-shadow: 0 0 1rem rgba(255,255,255, 1);
 
 }
 
