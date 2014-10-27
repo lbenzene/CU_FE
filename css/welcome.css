@@ -9,13 +9,12 @@ body {
   height: 100%;
   width: 100%;
   background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#FF0000), to(#C00000));
-  transition: all 2s 1s;
+  transition: all 1s 2s;
   z-index: 1000;
 }
 
 #welcome.hiden {
-  opacity: 0;
-  z-index: 0;
+  top: -100%;
 }
 
 div.login {
@@ -109,76 +108,4 @@ div.form > form input[type="password"]:-ms-input-placeholder {
 div.form > form input[type="text"]::-webkit-input-placeholder,
 div.form > form input[type="password"]::-webkit-input-placeholder {
   color: #666666;
-}
-
-a.btn,
-input[type="submit"].btn,
-input[type="button"].btn {
-  position: relative;
-  display: block;
-  height: 3rem;
-  width: auto;
-  box-sizing: border-box;
-  border-radius: .2rem;
-  border: none;
-  border-bottom: .2rem solid #CCCCCC;
-  background-color: #EBEBEB;
-  color: #666666;
-  line-height: 3rem;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 1.125rem;
-  -webkit-transition: all linear 0.2s;
-     -moz-transition: all linear 0.2s;
-       -o-transition: all linear 0.2s;
-          transition: all linear 0.2s;
-  cursor: pointer;
-}
-
-a.btn {
-  padding: 0 .5rem;
-  text-decoration: none;
-}
-
-a.btn.small {
-  height: 3rem;
-  width: auto;
-  margin-top: .5rem;
-}
-
-a.btn:hover,
-a.btn:focus {
-  background-color: #CBCBCB;
-  border-bottom-color: #ABABAB;
-}
-
-input[type="submit"].btn,
-input[type="button"].btn {
-  outline: none;
-  width: 100%;
-}
-
-a.bth,
-input[type="submit"].btn.blue,
-input[type="button"].btn.blue {
-  border-bottom-color: #19356b;
-  background-color: #3b5998;
-  color: #FFFFFF;
-}
-
-a.bth:hover,
-a.bth:focus,
-input[type="submit"].btn.blue:hover,
-input[type="button"].btn.blue:hover,
-input[type="submit"].btn.blue:focus,
-input[type="button"].btn.blue:focus {
-  border-bottom-color: #29457b;
-  background-color: #4b59A8;
-}
-
-input[type="submit"].btn.orange,
-input[type="button"].btn.orange {
-  border-bottom-color: #19356b;
-  background-color: #3b5998;
-  color: #FFFFFF;
 }

@@ -22,11 +22,13 @@ html {
   width: 100%;
   font-size: 100%;
   -webkit-text-size-adjust:none;
+  overflow: hidden;
 }
 
 body {
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
   width: 100%;
+  overflow: hidden;
 }
 
 ::webkit-selection{ background-color: #3333c0; color: white; }
@@ -43,6 +45,88 @@ a:hover,
 a:active,
 a:focus {
   text-decoration: underline;
+}
+
+
+a.btn,
+input[type="submit"].btn,
+input[type="button"].btn {
+  position: relative;
+  display: block;
+  height: 3rem;
+  width: auto;
+  box-sizing: border-box;
+  border-radius: .2rem;
+  border: none;
+  border-bottom: .2rem solid #CCCCCC;
+  background-color: #EBEBEB;
+  color: #666666;
+  line-height: 3rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: inherit;
+  -webkit-transition: all linear 0.2s;
+     -moz-transition: all linear 0.2s;
+       -o-transition: all linear 0.2s;
+          transition: all linear 0.2s;
+  cursor: pointer;
+}
+
+a.btn {
+  padding: 0 .5rem;
+  text-decoration: none;
+}
+
+a.btn.small {
+  height: 3rem;
+  width: auto;
+  margin-top: .5rem;
+}
+
+a.btn:hover,
+a.btn:focus {
+  background-color: #CBCBCB;
+  border-bottom-color: #ABABAB;
+}
+
+input[type="submit"].btn,
+input[type="button"].btn {
+  outline: none;
+  width: 100%;
+}
+
+a.btn.blue,
+input[type="submit"].btn.blue,
+input[type="button"].btn.blue {
+  border-bottom-color: #19356b;
+  background-color: #3b5998;
+  color: #FFFFFF;
+}
+
+a.btn.blue:hover,
+a.btn.blue:focus,
+input[type="submit"].btn.blue:hover,
+input[type="button"].btn.blue:hover,
+input[type="submit"].btn.blue:focus,
+input[type="button"].btn.blue:focus {
+  border-bottom-color: #29457b;
+  background-color: #4b59A8;
+}
+
+input[type="submit"].btn.orange,
+input[type="button"].btn.orange {
+  border-bottom-color: #19356b;
+  background-color: #3b5998;
+  color: #FFFFFF;
+}
+
+a.btn.green,
+input[type="submit"].btn.green,
+input[type="button"].btn.green {
+  border-bottom-color: #0F9D58;
+  background-color: #33B679;
+  color: #FFFFFF;
 }
 
   /**
@@ -202,113 +286,17 @@ div.white {
   vertical-align: middle;
 }
 
-div.class-table {
+  /**
+   * tag-choosing style
+   */
+div.tag-choosing > div {
   display: block;
-  overflow-x: auto;
-  overflow-y: visible; 
-  clear: both;
-  -webkit-border-radius: .4rem;
-          border-radius: .4rem;
-}
-
-div.class-table > div {
-  padding: 1rem;
-  overflow-y: visible;
-}
-
-table.class-table {
-  display: block;
-  width: 98rem;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-table.class-table thead {
-  background-color: #CCCCFF;
-}
-
-table.class-table th,
-table.class-table td {
-  border-style: solid;
-  border-color: #DBDBDB;
-  border-width: .1rem;
-  text-align: center;
-  vertical-align: middle;
-
-  font-family: inherit;
-  font-size: 1.4rem;
-  cursor: default;
-}
-
-table.class-table td {
-  padding: .5rem 0;
-  width: 6.3rem;
-}
-
-table.class-table td.class-num {
-  width: 6.1rem;
-}
-
-table.class-table > tbody > tr > td:first-child[rowspan] {
-  width: 2rem;
-}
-
-table.class-table td,
-.class-info > a {
-  cursor: pointer;
-}
-
-table.class-table tr:first-child > td {
-  cursor: default;
-}
-
-table.class-table td:hover {
-  background-color: #CCFFFF;
-}
-
-table.class-table td.chosen {
-  background-color: #CCCCFF;
-}
-
-table.class-table td.danger {
-  background-color: #FFCCCC;
-}
-
-table.class-table td.warning {
-  background-color: #EEDDCC;
-}
-
-table.class-table td.caution {
-  background-color: #DDEECC;
-}
-
-table.class-table td.safe {
-  background-color: #CCFFCC;
-}
-/*
-table.class-table td.chosen:hover,
-table.class-table td.danger:hover,
-table.class-table td.warning:hover,
-table.class-table td.caution:hover,
-table.class-table td.safe:hover {
-  opacity: .9;
-}
-*/
-table.class-table td > a {
   position: relative;
-  display: block;
-  margin-left: .4rem;
-  margin-right: .4rem;
-  text-align: center;
-  vertical-align: middle;
-  color: #333333;
-  cursor: pointer;
+  left: 100%;
+  margin-left: 1rem;
+  margin-top: 2rem;
 }
 
-table.class-table td:hover > a {
-  text-decoration: underline;
-  color: #141414;
-}
 
 .class-info {
   display: none;
@@ -347,57 +335,6 @@ table.class-table td:hover > div.class-info {
   background-color: #DDDDDD;
   border-style: none;
   text-decoration: none;
-}
-
-  /**
-   * #### div.blue ####
-   */
-div.blue > div {
-  background-color: transparent;
-}
-
-div.blue h1,
-div.blue p,
-div.blue a,
-div.blue td,
-div.blue th {
-  color: #F1F1F1 !important;
-}
-
-div.blue th {
-  background-color: #0044DD;
-}
-
-div.blue td.choosing {
-  background-color: transparent !important;
-}
-
-div.blue td.choosing > a {
-  color: #FF9999 !important;
-}
-
-div.blue td.chosen {
-  background-color: transparent !important;
-}
-
-div.blue td.choosing:hover {
-  background-color: #FFCCCC !important;
-}
-div.blue td.chosen:hover {
-  background-color: #FFFFFF !important;
-}
-div.blue td:hover > a {
-  color: #141414 !important;
-}
-
-div.blue div.class-info {
-  background-color: #003399 !important;
-  border-color: #FFFFFF !important;
-}
-
-div.blue div.class-info > a:hover {
-  background-color: #F1F1F1 !important;
-  color: #003399 !important;
 }
 
 .arrow-top,
