@@ -8,7 +8,7 @@ $(document).ready(function(){
         var flg = 0;
         for (var i = 1; i < 4; i++) {
             if (id_chosen == ("tag"+i)) {
-                tag_chosen("#tag"+i, 200);
+                tag_chosen("#tag"+i);
             } else {
                 tag_out("#tag"+i, 500, 200*flg++ + 200)
             }
@@ -64,10 +64,20 @@ function tag_out(obj, during, delay) {
         }, delay);
 }
 
-function tag_chosen(obj, during) {
+function tag_chosen(obj) {
     var $tag = $(obj);
+    var $taga = $tag.children("a");
     var offset = $tag.offset() - 0.5*$tag.width();
     var x = offset.left;
     var y = offset.top;
-    $tag.animate({"opacity":"0"},during);
+    $taga.addClass("chosen");
+    setTimeout(function(){
+        $tag.animate({"opacity":"0"}, 500);
+        $taga.animate({"width":"0","height":"0","top":"50%","left":"50%"}, 500);
+        }, 200);
+                  
+    var hfly = '<span class="tag">' + $taga.text +'</span>';
+    $("body").append(hfly);
+    // $tag.add
+    // $(document).addelement
 }
