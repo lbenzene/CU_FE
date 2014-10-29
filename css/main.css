@@ -374,6 +374,7 @@ div.control {
   right: 1rem;
   height: auto;
   width: auto;
+  z-index: 1001;
 }
 
 div.control > a.control {
@@ -428,15 +429,15 @@ div.control > a.control.active::after {
 
 div.control > div.control-list {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: .5rem;
+  right: .25rem;
 }
 
 div.control > div.control-list > a.icon {
   position: absolute;
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 1.25rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
   box-shadow: 0 .2rem .4rem rgba(0,0,0, .25);
   font-size: 2rem;
   text-align: center;
@@ -456,6 +457,12 @@ div.control > div.control-list > a#favor {
 div.control > div.control-list > a#star {
   background-color: #F4B400;
   bottom: 6rem;
+  right: 0;
+}
+
+div.control > div.control-list > a#folk {
+  background-color: #0F9D58;
+  bottom: 9rem;
   right: 0;
 }
 

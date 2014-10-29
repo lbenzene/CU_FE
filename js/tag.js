@@ -13,7 +13,7 @@ $(document).ready(function(){
             }
         }
 
-        setTimeout(function(){reset_all("tag1", "tag2", "tag3");}, 1500);
+        setTimeout("reset_all('tag1', 'tag2', 'tag3')", 1500);
     });
 });
 
