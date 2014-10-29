@@ -450,19 +450,19 @@ div.control > div.control-list > a.icon {
 
 div.control > div.control-list > a#favor {
   background-color: #4285F4;
-  bottom: 3rem;
+  bottom: 0;
   right: 0;
 }
 
 div.control > div.control-list > a#star {
   background-color: #F4B400;
-  bottom: 6rem;
+  bottom: 0;
   right: 0;
 }
 
 div.control > div.control-list > a#folk {
   background-color: #0F9D58;
-  bottom: 9rem;
+  bottom: 0;
   right: 0;
 }
 

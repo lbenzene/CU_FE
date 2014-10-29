@@ -32,8 +32,11 @@ var list = function(id) {
         if (bBtn && !oBtn.hasClass("active")) {
             oBtn.addClass("active");
             for (var i = 0; i < oIcon.length; i++) {
-                setTimeout("oIcon[i].animate({bottom:String(3*(i+1))+'rem'}, (1+i)*400);", (oIcon.length-i)*200);
-                // oIcon[i].animate({bottom:String(3*(i+1))+"rem"}, (i+1)*400;
+                (function(e){
+                    setTimeout(function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, (1+e)*400)},
+                        (oIcon.length-e)*400);
+                })(i);
+                // oIcon[i].animate({bottom:String(3*(i+1))+"rem"}, (i+1)*400);
             }
             $("body").append("<div id='background' style='position:fixed;top:0;left:0;opacity:0;width:100%;height:100%;background-color:rgba(255,255,255,.6);z-index:1000'>")
             $("#background").animate({opacity:"1"}, 500);
