@@ -44,18 +44,16 @@ function tag_ready(id1, id2, id3, during, delay) {
   * @return {[type]}       
   */
 function tag_in(obj, during, delay) { 
-	$(function(){
 	var $tag = $(obj);
 	// var offset = $panel.offset()-$panel.width();
 	// var x= offset.left;
 	// var y= offset.top;
     setTimeout(function(){
-        $tag.animate({"left":"0","margin-left":"0"},during);
-        }, delay);
+        $tag.animate({left:"0",marginLeft:"-.5rem"}, during, function(){
+            $tag.animate({marginLeft:"0"},100);})
+    }, delay);
 	// $panel.animate({left:0},fx);
 	// $panel.offset({ top: y, left: x });
-		
-	})
 }
 
  /**
@@ -68,7 +66,7 @@ function tag_in(obj, during, delay) {
 function tag_out(obj, during, delay) {
     var $tag = $(obj);
     setTimeout(function(){
-        $tag.animate({"left":"-100%","margin-right":"1rem"},during);
+        $tag.animate({left:"-100%",marginRight:"1rem"},during);
         }, delay);
 }
 

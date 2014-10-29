@@ -33,8 +33,13 @@ var list = function(id) {
             oBtn.addClass("active");
             for (var i = 0; i < oIcon.length; i++) {
                 (function(e){
-                    setTimeout(function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, (1+e)*400)},
-                        (oIcon.length-e)*400);
+                    setTimeout(function(){
+                        oIcon[e].animate(
+                            {bottom:String(3*(e+1)+.5)+'rem'}, 
+                            (1+e)*300,
+                            function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, 150)}
+                        );
+                    }, (oIcon.length-e-1)*350+100);
                 })(i);
                 // oIcon[i].animate({bottom:String(3*(i+1))+"rem"}, (i+1)*400);
             }
@@ -52,19 +57,20 @@ var list = function(id) {
         ev.cancelBubble = true;
         ev.preventDefault();
     });
-    $("#background").click(function() {
+    $("body").click(function() {
         if (bBtn == false) {
             oBtn.removeClass("active");
             for (var i = 0; i < oIcon.length; i++) {
                 oIcon[i].animate({bottom:"0rem"}, 500);
             } 
-            $("#background").animate({opacity:"0"}, 500, function(){$("#background").remove()});
+            $("#background").animate({opacity:"0"}, 500, function(){$("#background").remove();});
+            bBtn = !bBtn;
         }
     });
-/*        document.querySelector("#header-div").onclick=function(ev){
+    document.querySelector("div.control").onclick=function(ev){
         var ev =  ev || window.event;
         ev.cancelBubble = true;
-    }*/
+    }
 }("#control-button");
 
 
