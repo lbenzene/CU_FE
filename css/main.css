@@ -448,22 +448,87 @@ div.control > div.control-list > a.icon {
   cursor: pointer;
 }
 
-div.control > div.control-list > a#favor {
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+div.control > div.control-list > a > span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: .6rem;
+  display: block;
+  font-family: "Glyphicons Halflings";
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1em;
+  width: 2rem;
+  height: 1rem;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+div.control > div.control-list > a#like {
   background-color: #4285F4;
   bottom: 0;
   right: 0;
 }
 
+div.control > div.control-list > a#like > span::before {
+  content: "\e005";
+}
+
+
+/*
+div.control > div.control-list > a#like::before,
+div.control > div.control-list > a#like::after {
+  position: absolute;
+  top: .6rem;
+  left: .6rem;
+  content: "";
+  width: .6rem;
+  height: .9rem;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  background-color: #FFFFFF;
+}
+
+div.control > div.control-list > a#like::before {
+  transform: rotate(-45deg);
+}
+
+div.control > div.control-list > a#like::after {
+  transform: rotate(45deg);
+  margin-left: .25rem;
+}
+*/
 div.control > div.control-list > a#star {
   background-color: #F4B400;
   bottom: 0;
   right: 0;
 }
 
+div.control > div.control-list > a#star > span::before {
+  content: "\e007";
+}
+
+div.control > div.control-list > a#star:focus > span::before {
+  content: "\e006";
+}
+
 div.control > div.control-list > a#folk {
   background-color: #0F9D58;
   bottom: 0;
   right: 0;
+}
+
+div.control > div.control-list > a#folk > span::before {
+  content: "\270f";
 }
 
 .class-info {

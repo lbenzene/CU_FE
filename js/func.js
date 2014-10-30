@@ -1,5 +1,5 @@
 var oIcon = new Array();
-oIcon[0] = $("a#favor");
+oIcon[0] = $("a#like");
 oIcon[1] = $("a#star");
 oIcon[2] = $("a#folk");
 function show_icon(i) {
@@ -37,7 +37,7 @@ var list = function(id) {
                         oIcon[e].animate(
                             {bottom:String(3*(e+1)+.5)+'rem'}, 
                             (1+e)*300,
-                            function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, 150)}
+                            function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, 200)}
                         );
                     }, (oIcon.length-e-1)*350+100);
                 })(i);
