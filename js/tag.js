@@ -3,10 +3,24 @@ var tag = new Array();
 tag[0] = $("#tag1");
 tag[1] = $("#tag2");
 tag[2] = $("#tag3");
+tag[3] = $("#tag4");
+tag[4] = $("#tag5");
+
 
 $(document).ready(function(){
     tag_ready(tag, 500, 200);
 
+    $("div.tag-choosing").children("div").click(function(){
+        var oa = $(this).children("a");
+        if (oa.hasClass("chosen")) {
+            oa.removeClass("chosen");
+            //delete
+        } else {
+            oa.addClass("chosen");
+        }
+    })
+});
+/*
     $("div.tag-choosing").children("div").click(function(){
         var id_chosen = $(this).attr("id");
         // alert(id_chosen);
@@ -19,20 +33,19 @@ $(document).ready(function(){
             }
         }
 
-        setTimeout("reset_all('tag1', 'tag2', 'tag3')", 1500);
+        setTimeout(function(){reset_all(tag)}, 1500);
     });
-});
-
-function reset_all(id1, id2, id3) {
-    reset_tag(id1);
-    reset_tag(id2);
-    reset_tag(id3);
+*/
+function reset_all(tag) {
+    for (var i = 0; i < tag.length; i++) {
+        reset_tag(tag[i]);
+    };
     tag_ready(tag, 500, 200);
 }
 
-function reset_tag(id) {
-    $("#"+id).css({"left":"100%","margin-left":"1rem","margin-right":"0","opacity":"1"});
-    $("#"+id).children("a").removeClass("chosen");
+function reset_tag(obj) {
+    obj.animate({"left":"100%","margin-left":"1rem","margin-right":"0","opacity":"1"}, 0);
+    obj.children("a").removeClass("chosen");
 }
 
 function tag_ready(tag, during, delay) {

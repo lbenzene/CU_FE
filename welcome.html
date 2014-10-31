@@ -16,10 +16,6 @@
 
 <body>
 
-<div id="welcome">
-    <h1>HELLO</h1>
-</div>
-
 <header>
     <div class="container">
         <a class="logo" href="./welcome.html"><!--<img src="" >-->KnowU</a>
@@ -29,21 +25,36 @@
     </div>
 </header>
 
-<div class="login">
-    <h1>Member Login</h1>
-    <form>
-        <input type="hidden" id="csrf_token" name="csrf_token">
-        <div>
-            <input name="username" type="text" placeholder="学号" maxlength="10" />
-        </div>
-        <div>
-            <input nmae="password" type="password" placeholder="密码" />
-        </div>
-        <div>
-            <input class="btn blue" name="submit" type="submit" value="登&nbsp;录" />
-        </div>
-    </form>
+<div class="row bg_grey_2">
+    <div class="container">
+        <h1>Member Login</h1>
+    </div>
+</div>
 
+<div class="row">
+    <div class="login container">
+        <form>
+            <input type="hidden" id="csrf_token" name="csrf_token">
+            <div>
+                <input name="username" type="text" placeholder="学号" maxlength="10" />
+            </div>
+            <div>
+                <input nmae="password" type="password" placeholder="密码" />
+            </div>
+            <div>
+                <input class="btn blue" name="submit" type="submit" value="登&nbsp;录" />
+            </div>
+        </form>
+        <p><a href="">忘记密码</a></p>
+    </div>
+    <div class="container">
+        <h2 class="center">OR</h2>
+        <h1>注册</h1>
+    </div>
+</div>
+
+<div id="welcome">
+    <h1>HELLO</h1>
 </div>
 
 <script type="text/javascript" src="./js/jQuery.js"></script>

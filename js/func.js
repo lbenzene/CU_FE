@@ -36,10 +36,10 @@ var list = function(id) {
                     setTimeout(function(){
                         oIcon[e].animate(
                             {bottom:String(3*(e+1)+.5)+'rem'}, 
-                            (1+e)*300,
-                            function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, 200)}
+                            (1+e)*200,
+                            function(){oIcon[e].animate({bottom:String(3*(e+1))+'rem'}, 150)}
                         );
-                    }, (oIcon.length-e-1)*350+100);
+                    }, (oIcon.length-e-1)*250+100);
                 })(i);
                 // oIcon[i].animate({bottom:String(3*(i+1))+"rem"}, (i+1)*400);
             }
@@ -48,9 +48,9 @@ var list = function(id) {
         } else if (!bBtn && oBtn.hasClass("active")) {
             oBtn.removeClass("active");
             for (var i = 0; i < oIcon.length; i++) {
-                oIcon[i].animate({bottom:"0rem"}, 500);
+                oIcon[i].animate({bottom:"0rem"}, 300);
             }
-            $("#background").animate({opacity:"0"}, 500, function(){$("#background").remove();});
+            $("#background").animate({opacity:"0"}, 300, function(){$("#background").remove();});
             // setTimeout(function(){$("#background").remove();},500);
         }
         bBtn = !bBtn;
@@ -61,9 +61,9 @@ var list = function(id) {
         if (bBtn == false) {
             oBtn.removeClass("active");
             for (var i = 0; i < oIcon.length; i++) {
-                oIcon[i].animate({bottom:"0rem"}, 500);
+                oIcon[i].animate({bottom:"0rem"}, 300);
             } 
-            $("#background").animate({opacity:"0"}, 500, function(){$("#background").remove();});
+            $("#background").animate({opacity:"0"}, 300, function(){$("#background").remove();});
             bBtn = !bBtn;
         }
     });
