@@ -1,11 +1,9 @@
 
+var artag = $("#tag_choosing").children("div");
 var tag = new Array();
-tag[0] = $("#tag1");
-tag[1] = $("#tag2");
-tag[2] = $("#tag3");
-tag[3] = $("#tag4");
-tag[4] = $("#tag5");
-
+for (var i = 0; i < artag.length; i++) {
+    tag[i] = $("#" + artag[i]['id']);
+};
 
 $(document).ready(function(){
     tag_ready(tag, 500, 200);
@@ -20,6 +18,46 @@ $(document).ready(function(){
         }
     })
 });
+
+var tag_detail = function(id) {
+    var oBtn = $(id);
+    var bBtn = true;
+    var oUl = $("ul.chosen");
+    oBtn.click(function(ev) {
+        // alert(String(3*(2+1))+"rem");
+        var ev = ev || window.event;
+        if (bBtn && !oBtn.hasClass("active")) {
+            oBtn.addClass("active");
+            oUl.slideDown();
+
+            $("body").append("<div id='background' style='position:fixed;top:0;left:0;opacity:0;width:100%;height:100%;background-color:rgba(255,255,255,.6);z-index:400'>")
+            $("#background").animate({opacity:"1"}, 500);
+        } else if (!bBtn && oBtn.hasClass("active")) {
+            oBtn.removeClass("active");
+            oUl.slideUp();
+
+            $("#background").animate({opacity:"0"}, 300, function(){$("#background").remove();});
+            // setTimeout(function(){$("#background").remove();},500);
+        }
+        bBtn = !bBtn;
+        ev.cancelBubble = true;
+        ev.preventDefault();
+    });
+    $("body").click(function() {
+        if (bBtn == false) {
+            oBtn.removeClass("active");
+            oUl.slideUp();
+            $("#background").animate({opacity:"0"}, 300, function(){$("#background").remove();});
+            bBtn = !bBtn;
+        }
+    });
+    document.querySelector("header").onclick=function(ev){
+        var ev =  ev || window.event;
+        ev.cancelBubble = true;
+    }
+}("#tag-detail");
+
+
 /*
     $("div.tag-choosing").children("div").click(function(){
         var id_chosen = $(this).attr("id");
@@ -87,20 +125,4 @@ function tag_out(obj, during, delay) {
     setTimeout(function(){
         $tag.animate({left:"-100%",marginRight:"1rem"},during);
         }, delay);
-}
-
-function tag_chosen(obj) {
-    var $tag = obj;
-    var $taga = $tag.children("a");
-
-    $taga.addClass("chosen");
-    setTimeout(function(){
-        $tag.animate({"opacity":"0"}, 500);
-        // $taga.animate({"width":"110%","height":"110%","top":"-5%","left":"-5%"}, 500);
-        }, 200);
-    // var hfly = '<span class="tag" ';
-    // hfly +='style=' + $taga.text() +'</span>';
-    // $("body").append(hfly);
-    // $tag.add
-    // $(document).appendChild
 }
