@@ -1,15 +1,21 @@
+
+var tag = new Array();
+tag[0] = $("#tag1");
+tag[1] = $("#tag2");
+tag[2] = $("#tag3");
+
 $(document).ready(function(){
-    tag_ready("tag1", "tag2", "tag3", 500, 200);
+    tag_ready(tag, 500, 200);
 
     $("div.tag-choosing").children("div").click(function(){
         var id_chosen = $(this).attr("id");
         // alert(id_chosen);
         var flg = 0;
-        for (var i = 1; i < 4; i++) {
-            if (id_chosen == ("tag"+i)) {
-                tag_chosen("#tag"+i);
+        for (var i = 0; i < 3; i++) {
+            if ( id_chosen == (tag[i].attr("id")) ) {
+                tag_chosen(tag[i]);
             } else {
-                tag_out("#tag"+i, 500, 200*flg++ + 200);
+                tag_out(tag[i], 500, 200*flg++ + 200);
             }
         }
 
@@ -21,7 +27,7 @@ function reset_all(id1, id2, id3) {
     reset_tag(id1);
     reset_tag(id2);
     reset_tag(id3);
-    tag_ready("tag1", "tag2", "tag3", 500, 200);
+    tag_ready(tag, 500, 200);
 }
 
 function reset_tag(id) {
@@ -29,22 +35,22 @@ function reset_tag(id) {
     $("#"+id).children("a").removeClass("chosen");
 }
 
-function tag_ready(id1, id2, id3, during, delay) {
-    tag_in("#"+id1, during, 0);
-    tag_in("#"+id2, during, delay);
-    tag_in("#"+id3, during, 2*delay);
+function tag_ready(tag, during, delay) {
+    for (var i = 0; i < tag.length; i++) {
+        tag_in(tag[i], during, i*delay);
+    };
 }
 
 
  /**
   * 标签进入动画
-  * @param  {[type]} obj   [标签]
+  * @param  {[type]} obj   [对象]
   * @param  {[type]} during  [所需时间]
   * @param  {[type]} delay [延迟]
   * @return {[type]}       
   */
 function tag_in(obj, during, delay) { 
-	var $tag = $(obj);
+	var $tag = obj;
 	// var offset = $panel.offset()-$panel.width();
 	// var x= offset.left;
 	// var y= offset.top;
@@ -64,14 +70,14 @@ function tag_in(obj, during, delay) {
   * @return {[type]}       
   */
 function tag_out(obj, during, delay) {
-    var $tag = $(obj);
+    var $tag = obj;
     setTimeout(function(){
         $tag.animate({left:"-100%",marginRight:"1rem"},during);
         }, delay);
 }
 
 function tag_chosen(obj) {
-    var $tag = $(obj);
+    var $tag = obj;
     var $taga = $tag.children("a");
 
     $taga.addClass("chosen");
