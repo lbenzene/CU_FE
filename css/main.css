@@ -132,9 +132,9 @@ input[type="button"].btn.green {
 }
 
 a.btn.tag {
-  border-bottom-color: #19356b;
-  background-color: #3B5998;
-  color: #FFFFFF;
+  border-bottom-color: #99CCCC;
+  background-color: #CCFFFF;
+  color: #141414;
 }
 
   /**
@@ -459,23 +459,23 @@ div.tag-choosing > div > a.tag {
 
 @keyframes tag-chosen
 {
-0%   {box-shadow: 0 0 15px 2px rgba(255,255,255, 1);}
-50%  {box-shadow: 0 0 5px 0 rgba(255,255,255, 1);}
-100% {box-shadow: 0 0 15px 2px rgba(255,255,255, 1);}
+0%   {box-shadow: 0 0 15px 2px rgba(200,200,255, 1);}
+50%  {box-shadow: 0 0 5px 0 rgba(200,200,255, 1);}
+100% {box-shadow: 0 0 15px 2px rgba(200,200,255, 1);}
 }
 
 @-webkit-keyframes tag-chosen /* Safari 和 Chrome */
 {
-0%   {box-shadow: 0 0 15px 2px rgba(255,255,255, 1);}
-50%  {box-shadow: 0 0 5px 0 rgba(255,255,255, 1);}
-100% {box-shadow: 0 0 15px 2px rgba(255,255,255, 1);}
+0%   {box-shadow: 0 0 15px 2px rgba(200,200,255, 1);}
+50%  {box-shadow: 0 0 5px 0 rgba(200,200,255, 1);}
+100% {box-shadow: 0 0 15px 2px rgba(200,200,255, 1);}
 }
 
 div.tag-choosing > div > a.chosen {
-  background-color: #FFFFFF;
-  border-color: #FFFFFF;
-  color: #141414;
-  box-shadow: 0 0 15px 2px rgba(255,255,255, 1);
+  background-color: rgb(88,200,240);
+  border-color: rgb(66,180,220);
+  color: #FFFFFF;
+  box-shadow: 0 0 15px 2px rgba(200,200,255, 1);
   animation: tag-chosen 2s linear 0 infinite normal;
   -webkit-animation: tag-chosen 2s linear 0 infinite normal;
 }
